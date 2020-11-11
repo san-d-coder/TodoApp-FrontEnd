@@ -1,5 +1,11 @@
 # Todoapp
 
+This is a simple app created using Angular & Angular Material that prepares a full fledged todo app that connects to a backend created by Node. 
+
+This is the Front End code for this project. The backend Code is Published at the following Repo: TodoApp-BackEnd.
+
+This application was prepared by Sandeep Ghosh, for learning purposes only. Not for commercial use.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
 ## Development server
