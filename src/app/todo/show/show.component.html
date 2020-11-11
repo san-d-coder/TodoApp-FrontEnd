@@ -1,0 +1,27 @@
+<div class="container">
+  <br>
+  <br>
+  <mat-form-field style="width: 100%;">
+    <input placeholder="Type a name to start searching..." type="text" matInput [(ngModel)]="searchTerm">
+  </mat-form-field>
+  <br>
+  <br>
+  <br>
+  <br>
+  <mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Current">
+      <app-current-todo-list></app-current-todo-list>
+    </mat-tab>
+    <mat-tab label="Completed">
+      <app-completed-todo-list></app-completed-todo-list>
+    </mat-tab>
+    <mat-tab label="Deleted">
+      <app-deleted-todo-list></app-deleted-todo-list>
+    </mat-tab>
+  </mat-tab-group>
+  <div class="fab-button">
+    <button mat-fab color="primary" aria-label="Add new Todo" (click)="createNew()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+</div>

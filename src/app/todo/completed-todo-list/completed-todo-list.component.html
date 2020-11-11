@@ -1,0 +1,23 @@
+<div class="empty-list" *ngIf="isEmpty">
+  <h2>It's lonely here!</h2>
+</div>
+
+<div class="isWait">
+  <mat-spinner color="accent" *ngIf="isWait"></mat-spinner>
+</div>
+
+<div *ngIf="!isEmpty">
+<mat-card>
+    <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let todo of filteredTodos" cdkDrag>
+        <span style="margin-right: 30px;"></span>
+        <div>
+          {{todo.name}}
+        </div>
+        <span style="flex: 1 1 auto;"></span>
+        <span style="margin-right: 20px;"></span>
+        <mat-icon class="delete" matTooltip="Delete" (click)=deleteTodo(todo._id)>delete_outline</mat-icon>
+      </div>
+    </div>
+  </mat-card>
+</div>

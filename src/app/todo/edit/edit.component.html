@@ -1,0 +1,28 @@
+<div class="container">
+    <h2 mat-dialog-title>Edit Todo</h2>
+    <mat-dialog-content>
+        <form [formGroup]="editTodoForm" >
+            <mat-form-field class="full-width">
+              <mat-label>Name</mat-label>
+              <input matInput formControlName="name">
+            </mat-form-field>
+          
+            <mat-form-field class="full-width">
+              <mat-label>Description</mat-label>
+              <textarea matInput formControlName="description"></textarea>
+            </mat-form-field>
+
+            <mat-form-field class="full-width">
+                <mat-label>Due Date</mat-label>
+                <input matInput placeholder="MM/DD/YYYY" [matDatepicker]="picker" formControlName="dueDate">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </form>
+    </mat-dialog-content>
+    <br>
+    <mat-dialog-actions align="center">
+        <button mat-raised-button color="accent" mat-dialog-close>Cancel</button>
+        <button mat-raised-button color="primary" [disabled]="!editTodoForm.valid" mat-dialog-close (click)="onSubmit(editTodoForm.value)">Save</button>
+    </mat-dialog-actions>
+</div>

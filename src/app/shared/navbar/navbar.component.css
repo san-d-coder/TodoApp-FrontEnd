@@ -1,0 +1,11 @@
+.fill-space{
+    flex: 1 1 auto;
+}
+
+.icon-align{
+    margin-top: 5px;
+}
+
+mat-icon{
+    cursor: pointer;
+}

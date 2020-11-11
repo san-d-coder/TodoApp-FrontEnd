@@ -1,0 +1,28 @@
+<div style="text-align: center;">
+    <mat-card>
+    
+        <h1>Sign Up</h1>
+        <br>
+        <form [formGroup]="signUpForm" (ngSubmit)="onSignUp(signUpForm.value)">
+            
+            <mat-form-field>
+                <mat-label>Username</mat-label>
+                <input matInput formControlName="username">
+            </mat-form-field>
+            
+            <br>
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input matInput type="password" formControlName="password">
+            </mat-form-field>
+            <br>
+        
+        
+            <button mat-raised-button [disabled]="!signUpForm.valid" color="primary" type="submit">Sign Up</button>
+        
+           
+        </form>
+    
+    
+    </mat-card>
+    </div>

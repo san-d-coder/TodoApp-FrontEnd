@@ -1,0 +1,19 @@
+<div class="empty-list" *ngIf="isEmpty">
+  <h2>It's lonely here!</h2>
+</div>
+
+
+<div *ngIf="!isEmpty">
+<mat-card>
+    <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let todo of filteredTodos" cdkDrag>
+        <span style="margin-right: 30px;"></span>
+        <div>
+          {{todo.name}}
+        </div>
+        <span style="flex: 1 1 auto;"></span>
+        <mat-icon matTooltip="Clear" (click)="clearTodo(todo._id)">clear</mat-icon>
+      </div>
+    </div>
+  </mat-card>
+</div>
